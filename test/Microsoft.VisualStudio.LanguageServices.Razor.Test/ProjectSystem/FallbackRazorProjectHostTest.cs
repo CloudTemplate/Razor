@@ -17,7 +17,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
             Workspace = new AdhocWorkspace();
             ProjectManager = new TestProjectSnapshotManager(Dispatcher, Workspace);
 
-            ReferenceItems = new ItemCollection(ManageProjectSystemSchema.ResolvedCompilationReference.SchemaName);
+            ReferenceItems = new ItemCollection(ManagedProjectSystemSchema.ResolvedCompilationReference.SchemaName);
         }
 
         private ItemCollection ReferenceItems { get; }

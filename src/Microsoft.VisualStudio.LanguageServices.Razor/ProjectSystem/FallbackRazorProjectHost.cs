@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 using Microsoft.VisualStudio.LanguageServices;
 using Microsoft.VisualStudio.ProjectSystem;
-using ResolvedCompilationReference = Microsoft.CodeAnalysis.Razor.ProjectSystem.ManageProjectSystemSchema.ResolvedCompilationReference;
+using ResolvedCompilationReference = Microsoft.CodeAnalysis.Razor.ProjectSystem.ManagedProjectSystemSchema.ResolvedCompilationReference;
 
 namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
 {
@@ -32,7 +32,7 @@ namespace Microsoft.CodeAnalysis.Razor.ProjectSystem
         public FallbackRazorProjectHost(
             IUnconfiguredProjectCommonServices commonServices,
             [Import(typeof(VisualStudioWorkspace))] Workspace workspace)
-            : base(commonServices, workspace)
+            : base(commonServices, workspace, projectContextFactory: null)
         {
         }
 
